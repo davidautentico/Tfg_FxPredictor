@@ -6,7 +6,10 @@ public class StratPerformance {
 	double pfYears = 0.0;
 	int years = 0;
 	double avgPips  = 0.0;
-	
+	double maxDD = 0;
+	double winPips = 0;
+	double lostPips = 0;
+	double trades = 0;
 	
 	public double getPf() {
 		return pf;
@@ -31,6 +34,40 @@ public class StratPerformance {
 	}
 	public void setPfYears(double pfYears) {
 		this.pfYears = pfYears;
+	}
+	public double getMaxDD() {
+		return maxDD;
+	}
+	public void setMaxDD(double maxDD) {
+		this.maxDD = maxDD;
+	}
+	public void reset() {
+		pf = 0.0;
+		pfYears = 0.0;
+		years = 0;
+		avgPips  = 0.0;
+		 maxDD = 0;		
+		winPips = 0;
+		lostPips = 0;
+		trades = 0;
+	}
+	public double getWinPips() {
+		return winPips;
+	}
+	public void setWinPips(double winPips) {
+		this.winPips = winPips;
+	}
+	public double getLostPips() {
+		return lostPips;
+	}
+	public void setLostPips(double lostPips) {
+		this.lostPips = lostPips;
+	}
+	public double getTrades() {
+		return trades;
+	}
+	public void setTrades(double trades) {
+		this.trades = trades;
 	}
 	
 	

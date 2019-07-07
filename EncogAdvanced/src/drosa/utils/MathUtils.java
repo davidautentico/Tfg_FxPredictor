@@ -9,6 +9,16 @@ import drosa.finances.QuoteShort;
 
 public class MathUtils {
 	
+	public static int getRandomNumberInRange(int min, int max) {
+
+		if (min >= max) {
+			throw new IllegalArgumentException("max must be greater than min");
+		}
+
+		Random r = new Random();
+		return r.nextInt((max - min) + 1) + min;
+	}
+	
 	public static double coeficienteR(ArrayList<Integer> x,ArrayList<Integer> y){
 		double corr = 0.0;
 		
@@ -272,7 +282,7 @@ public class MathUtils {
 			sum+= Math.pow(deltaP.get(i)-avg,2);
 		}
 		
-		return sum/(deltaP.size()-1);
+		return sum/(end-begin+1);
 	}
 	
 	public static float Round(float Rval, int Rpl) {
